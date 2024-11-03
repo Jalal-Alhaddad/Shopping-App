@@ -11,6 +11,7 @@ npx create-expo-app@latest --template
 
 npx expo install react-native-web react-dom @expo/metro-runtime
 ```
+
 ## 2. Install Additional Packages
 
 1. Install [Expo Vector Icons](https://docs.expo.dev/guides/icons/)
@@ -41,23 +42,27 @@ react-native-safe-area-context
 
 ## 4. Start the app
 
+- Use the following command to test your application.
+
 ```bash
 npm run web
 ```
 
-## 5. Create folders [4/11/2024]
+- Then stop the application using `Ctrl+C`
+
+## 6. Project Folder Structure
+
+### Create folders
 
 ```bash
-|
 |- components
 |- navigation
 |- screens
 |- themes
 |- utils
-|- server
 ```
 
-## 6. Project Folder Structure
+### Create files
 
 ```bash
 |- components
@@ -93,11 +98,29 @@ npm run web
 2. Extract it, so you should find a `server` folder into your project folder
 3. This folder contain the api code to be used in your mobile app
 4. Install `concurrently` package to help run the api with the mobile app
-5. Update `package.json` by adding the following lines
 
 ```bash
 npm install concurrently --save-dev
 ```
+
+5. Update `package.json` by adding the following lines to **scripts**
+
+```json
+  "scripts": {
+
+    "seed": "cd server && npm i && npm run seed",
+    "start:server": "cd server && npm start",
+    "dev": "concurrently \"npm run web\" \"npm run start:server\""
+  },
+```
+
+6. Run `npm run seed` to install server' packages and seed the database
+7. Run `npm run dev` to test your application, at this moment you have 2 running projects, the server and your app
+8. You can use `shop-api.http` from the `server` folder to test the API
+
+
+
+
 
 ## 8. File Naming
 
