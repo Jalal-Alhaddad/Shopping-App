@@ -171,5 +171,23 @@ npm install concurrently --save-dev
   },
   "private": true
 }
-
 ```
+
+## 10 Create Screen & Navigators
+
+- Create all screens, and navigators
+- Add `screenOptions={{ headerShown: false }}` to `Stack.Navigator` component in `RootNavigator`
+- Add `options={{ title: "View Shop" }}` to all `Stack.Screen` components in `ShopNavigator`, change names accordantly
+
+## 11 Theming
+
+> [Design System](./Design%20System.md) for more information about Design System
+
+- [Material Design](https://m3.material.io/)
+- [react native paper](https://reactnativepaper.com/)
+- [Material 3 Design Kit](https://www.figma.com/community/file/1035203688168086460/material-3-design-kit)
+- [Material Theme Builder](https://www.figma.com/community/plugin/1034969338659738588/material-theme-builder)
+
+### Why need UI library
+
+Design systems make it easier for developers and designers to ensure a cohesive look and feel and streamline collaboration.
