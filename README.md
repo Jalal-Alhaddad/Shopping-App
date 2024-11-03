@@ -17,13 +17,15 @@ npx expo install react-native-web react-dom @expo/metro-runtime
 1. Install [Expo Vector Icons](https://docs.expo.dev/guides/icons/)
 2. Install [React Native Paper](https://reactnativepaper.com/)
 3. Visit [icons.expo.fyi](https://icons.expo.fyi/Index) to browse `@expo/vector-icons` icons set
-
-Check out this <a href="https://icons.expo.fyi/Index" target="_blank">icons.expo.fyi</a>.
+4. Install `@react-native-async-storage/async-storage` to manage local storage in the application
+5. Install `react-native-paper-dropdown` to use Dropdown component in the application
 
 ```bash
 npx expo install `
 @expo/vector-icons `
-react-native-paper
+react-native-paper `
+@react-native-async-storage/async-storage `
+react-native-paper-dropdown
 ```
 
 ## 3. Install React Navigator
@@ -120,10 +122,6 @@ npm install concurrently --save-dev
 7. Run `npm run dev` to test your application, at this moment you have 2 running projects, the server and your app
 8. You can use `shop-api.http` from the `server` folder to test the API
 
-
-
-
-
 ## 8. File Naming
 
 - **PascalCase** for screens, components, and navigators
@@ -136,5 +134,42 @@ npm install concurrently --save-dev
 - You should have `package.json` like this in your project folder
 
 ```javascript
+{
+  "name": "shop-mobile-sky24",
+  "version": "1.0.0",
+  "main": "expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "seed": "cd server && npm i && npm run seed",
+    "start:server": "cd server && npm start",
+    "dev": "concurrently \"npm run web\" \"npm run start:server\""
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "~3.2.3",
+    "@expo/vector-icons": "^14.0.3",
+    "@react-native-async-storage/async-storage": "1.23.1",
+    "@react-navigation/bottom-tabs": "^6.6.1",
+    "@react-navigation/native": "^6.1.18",
+    "@react-navigation/stack": "^6.4.1",
+    "expo": "~51.0.28",
+    "expo-status-bar": "~1.12.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.74.5",
+    "react-native-paper": "^5.12.5",
+    "react-native-paper-dropdown": "^2.3.1",
+    "react-native-safe-area-context": "4.10.5",
+    "react-native-screens": "3.31.1",
+    "react-native-web": "~0.19.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "concurrently": "^9.0.1"
+  },
+  "private": true
+}
 
 ```
