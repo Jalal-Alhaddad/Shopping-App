@@ -176,7 +176,7 @@ npm install concurrently --save-dev
 ## 10 Create Screen & Navigators
 
 - Create all screens, and navigators
-- Add `screenOptions={{ headerShown: false }}` to `Stack.Navigator` component in `RootNavigator`
+- Add `screenOptions={{ headerShown: false }}` to `Stack.Navigator` component in `RootNavigator` & `ShopNavigator`
 - Add `options={{ title: "View Shop" }}` to all `Stack.Screen` components in `ShopNavigator`, change names accordantly
 
 ## 11 Theming
@@ -191,6 +191,8 @@ npm install concurrently --save-dev
 ### Why need UI library
 
 Design systems make it easier for developers and designers to ensure a cohesive look and feel and streamline collaboration.
+
+- Check react-native-paper [Button.tsx](https://github.com/callstack/react-native-paper/blob/main/src/components/Button/Button.tsx) component
 
 ### Create themes in Dynamic Color Themes
 
