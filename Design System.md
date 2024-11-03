@@ -4,9 +4,9 @@
 
 > A **Design System** is a set of standards, guidelines, and reusable components that establish a unified and consistent design language across an application or suite of products
 
-**Includes**]The visual and functional principles (like color palettes, typography, spacing, etc.) as well as interactive elements (buttons, forms, icons, etc.)
+**Includes**: The visual and functional principles (like color palettes, typography, spacing, etc.) as well as interactive elements (buttons, forms, icons, etc.)
 
-**Purpose**]Design systems make it easier for developers and designers to ensure a cohesive look and feel and streamline collaboration
+**Purpose**: Design systems make it easier for developers and designers to ensure a cohesive look and feel and streamline collaboration
 
 ### Popular Design Systems
 

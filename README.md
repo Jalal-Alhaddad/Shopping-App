@@ -191,3 +191,21 @@ npm install concurrently --save-dev
 ### Why need UI library
 
 Design systems make it easier for developers and designers to ensure a cohesive look and feel and streamline collaboration.
+
+### Create themes in Dynamic Color Themes
+
+[Dynamic Color Themes](https://callstack.github.io/react-native-paper/docs/guides/theming#creating-dynamic-theme-colors)
+
+- use `Hex: #941a1d` as main color
+- Copy the theme into the `darkTheme.json` and `lightTheme.json`
+- Add the following code to the top of themes file.
+
+```json
+// lightTheme.json
+  "dark": false,
+  "roundness": 2,
+
+// darkTheme.json
+    "dark": true,
+  "roundness": 2,
+```
