@@ -18,6 +18,8 @@ npx expo install react-native-web react-dom @expo/metro-runtime
 2. Install [React Native Paper](https://reactnativepaper.com/)
 3. Visit [icons.expo.fyi](https://icons.expo.fyi/Index) to browse `@expo/vector-icons` icons set
 
+Check out this <a href="https://icons.expo.fyi/Index" target="_blank">icons.expo.fyi</a>.
+
 ```bash
 npx expo install `
 @expo/vector-icons `
