@@ -186,13 +186,13 @@ npm run dev
 }
 ```
 
-## 10 Create Screen & Navigators
+## 10. Create Screen & Navigators
 
 - Create all screens, and navigators
 - Add `screenOptions={{ headerShown: false }}` to `Stack.Navigator` component in `RootNavigator` & `ShopNavigator`
 - Add `options={{ title: "View Shop" }}` to all `Stack.Screen` components in `ShopNavigator`, change names accordantly
 
-### Navigator Structure
+### Navigators Structure
 
 - **RootNavigator**
   - Screen name="Main" = MainNavigator
@@ -202,13 +202,13 @@ npm run dev
   - Screen name='Shop' = ShopNavigator
   - Screen name='Help' = HelpScreen
 - **ShopNavigator**
-- Screen name="ProductView" = ShopViewScreen
-- Screen name="ProductEdit" = ProductViewScreen
-- Screen name="ShopView" = ProductEditScreen
+  - Screen name="ProductView" = ShopViewScreen
+  - Screen name="ProductEdit" = ProductViewScreen
+  - Screen name="ShopView" = ProductEditScreen
 
 > Inject `<RootNavigator/>` in the App.js and wrap it with `<NavigationContainer>`
 
-## Api call
+## 11. Api call
 
 - in `api.js` file write code to call asynchronously the api using `fetch` method
   - `export async function fetchCategories()`
@@ -218,7 +218,12 @@ npm run dev
   - `export async function updateProduct(id, updatedData)`
   - `export async function deleteProduct(id)`
 
-## 21 Theming
+## 12. Retrieve the data in the Screens
+
+- Use `useState` to store the retrieved data
+- Use `useEffect` to retrieve the data by calling the api function from the `api.js`
+
+## 21. Theming
 
 > [Design System](./Design%20System.md) for more information about Design System
 
