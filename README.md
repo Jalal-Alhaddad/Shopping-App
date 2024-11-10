@@ -8,7 +8,9 @@
 
 ```bash
 npx create-expo-app@latest --template
+```
 
+```bash
 npx expo install react-native-web react-dom @expo/metro-runtime
 ```
 
