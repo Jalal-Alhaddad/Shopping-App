@@ -77,6 +77,8 @@ npm install concurrently --save-dev
     "dev": "concurrently \"npm run web\" \"npm run start:server\""
 ```
 
+![command](Images/JH_2024-11-10-18-48-06.png)
+
 5. Run `npm run seed` to install server' packages and seed the database
 6. Run `npm run dev` to test your application, at this moment you have 2 running projects, the server and your app
 7. You can use `shop-api.http` from the `server` folder to test the API
