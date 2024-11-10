@@ -4,11 +4,20 @@
 
 1. Create react-native application using [Expo](https://docs.expo.dev/get-started/create-a-project/)
 2. Use **Blank** template [`--template`]
-3. Install additional libraries to run in web mode
 
 ```bash
 npx create-expo-app@latest --template
 ```
+
+![expo](Images/JH_2024-11-10-18-41-48.png)
+
+3. Name your project
+
+![name](Images/JH_2024-11-10-18-43-51.png)
+
+4. Open the project folder
+
+5. Install additional libraries to run in web mode
 
 ```bash
 npx expo install react-native-web react-dom @expo/metro-runtime
