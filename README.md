@@ -83,7 +83,7 @@ npm install concurrently --save-dev
 6. Run `npm run dev` to test your application, at this moment you have 2 running projects, the server and your app
 7. You can use `shop-api.http` from the `server` folder to test the API
 
-## 6. Start the app
+## 6. Start the App
 
 - Use the following command to test your application.
 
@@ -192,7 +192,33 @@ npm run dev
 - Add `screenOptions={{ headerShown: false }}` to `Stack.Navigator` component in `RootNavigator` & `ShopNavigator`
 - Add `options={{ title: "View Shop" }}` to all `Stack.Screen` components in `ShopNavigator`, change names accordantly
 
-## 11 Theming
+### Navigator Structure
+
+- **RootNavigator**
+  - Screen name="Main" = MainNavigator
+  - Screen name="NotFound" = NotFoundScreen
+- **MainNavigator**
+  - Screen name='Home' = HomeScreen
+  - Screen name='Shop' = ShopNavigator
+  - Screen name='Help' = HelpScreen
+- **ShopNavigator**
+- Screen name="ProductView" = ShopViewScreen
+- Screen name="ProductEdit" = ProductViewScreen
+- Screen name="ShopView" = ProductEditScreen
+
+> Inject `<RootNavigator/>` in the App.js and wrap it with `<NavigationContainer>`
+
+## Api call
+
+- in `api.js` file write code to call asynchronously the api using `fetch` method
+  - `export async function fetchCategories()`
+  - `export async function fetchProducts()`
+  - `export async function fetchProductById(id)`
+  - `export async function addProduct(productData)`
+  - `export async function updateProduct(id, updatedData)`
+  - `export async function deleteProduct(id)`
+
+## 21 Theming
 
 > [Design System](./Design%20System.md) for more information about Design System
 
