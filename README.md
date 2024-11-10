@@ -25,7 +25,8 @@ npx expo install `
 @expo/vector-icons `
 react-native-paper `
 @react-native-async-storage/async-storage `
-react-native-paper-dropdown
+react-native-paper-dropdown `
+react-native-safe-area-context
 ```
 
 ## 3. Install React Navigator
@@ -34,27 +35,52 @@ react-native-paper-dropdown
 - Install [Tabs Navigator](https://reactnavigation.org/docs/tab-based-navigation)
 - Install [Stack Navigator](https://reactnavigation.org/docs/stack-navigator)
 - Install dependencies into an Expo managed project
+- Install `react-native-screens` is a library used in React Native to optimize and manage navigation screens.
 
 ```bash
 npx expo install `
 @react-navigation/native `
 @react-navigation/bottom-tabs `
 @react-navigation/stack `
-react-native-screens `
-react-native-safe-area-context
+react-native-screens@latest
 ```
 
-## 4. Start the app
+## 4. Install Additional tools
+
+- Install `concurrently` package to help run the api with the mobile app
+
+```bash
+npm install concurrently --save-dev
+```
+
+## 5. Configure the server
+
+1. Download [server](./assets/server.zip) zip file into the project folder
+2. Extract it, so you should find a `server` folder into your project folder
+3. This folder contain the api code to be used in your mobile app
+4. Update `package.json` by adding the following lines to **scripts**
+
+```json
+    "seed": "cd server && npm i && npm run seed",
+    "start:server": "cd server && npm start",
+    "dev": "concurrently \"npm run web\" \"npm run start:server\""
+```
+
+5. Run `npm run seed` to install server' packages and seed the database
+6. Run `npm run dev` to test your application, at this moment you have 2 running projects, the server and your app
+7. You can use `shop-api.http` from the `server` folder to test the API
+
+## 6. Start the app
 
 - Use the following command to test your application.
 
 ```bash
-npm run web
+npm run dev
 ```
 
 - Then stop the application using `Ctrl+C`
 
-## 6. Project Folder Structure
+## 7. Project Folder Structure
 
 ### Create folders
 
@@ -96,32 +122,6 @@ npm run web
     |- api.js
 ```
 
-## 7. Configure the server
-
-1. Download [server](./assets/server.zip) zip file into the project folder
-2. Extract it, so you should find a `server` folder into your project folder
-3. This folder contain the api code to be used in your mobile app
-4. Install `concurrently` package to help run the api with the mobile app
-
-```bash
-npm install concurrently --save-dev
-```
-
-5. Update `package.json` by adding the following lines to **scripts**
-
-```json
-  "scripts": {
-
-    "seed": "cd server && npm i && npm run seed",
-    "start:server": "cd server && npm start",
-    "dev": "concurrently \"npm run web\" \"npm run start:server\""
-  },
-```
-
-6. Run `npm run seed` to install server' packages and seed the database
-7. Run `npm run dev` to test your application, at this moment you have 2 running projects, the server and your app
-8. You can use `shop-api.http` from the `server` folder to test the API
-
 ## 8. File Naming
 
 - **PascalCase** for screens, components, and navigators
@@ -162,7 +162,7 @@ npm install concurrently --save-dev
     "react-native-paper": "^5.12.5",
     "react-native-paper-dropdown": "^2.3.1",
     "react-native-safe-area-context": "4.10.5",
-    "react-native-screens": "3.31.1",
+    "react-native-screens": "^4.0.0",
     "react-native-web": "~0.19.10"
   },
   "devDependencies": {
