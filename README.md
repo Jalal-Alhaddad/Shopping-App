@@ -50,9 +50,9 @@ react-native-safe-area-context
 
 ```bash
 npx expo install `
-@react-navigation/native `
-@react-navigation/bottom-tabs `
-@react-navigation/stack `
+@react-navigation/native@^6.1.18 `
+@react-navigation/bottom-tabs@^6.6.1 `
+@react-navigation/stack@^6.4.1 `
 react-native-screens@latest
 ```
 
