@@ -194,14 +194,14 @@ npm run dev
 
 ### Navigators Structure
 
-- **RootNavigator**
+- **RootNavigator = Stack**
   - Screen name="Main" = MainNavigator
   - Screen name="NotFound" = NotFoundScreen
-- **MainNavigator**
+- **MainNavigator = Tab**
   - Screen name='Home' = HomeScreen
   - Screen name='Shop' = ShopNavigator
   - Screen name='Help' = HelpScreen
-- **ShopNavigator**
+- **ShopNavigator = Stack**
   - Screen name="ProductView" = ShopViewScreen
   - Screen name="ProductEdit" = ProductViewScreen
   - Screen name="ShopView" = ProductEditScreen
